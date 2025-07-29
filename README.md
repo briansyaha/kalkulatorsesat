@@ -32,10 +32,12 @@
             justify-content: center;
             align-items: center;
             padding: 0 10px;
-            font-size: 24px;
+            font-size: 18px;
             overflow: hidden;
-            color: red;
+            color: #e91e63;
             font-weight: bold;
+            text-align: center;
+            padding: 0 5px;
         }
         
         .buttons {
@@ -120,7 +122,7 @@
         let operation = null;
         let resetScreen = false;
         const display = document.getElementById('display');
-        const kontolMessage = document.getElementById('kontol-message');
+        const specialMessage = document.getElementById('kontol-message');
 
         function appendNumber(number) {
             if (currentInput === '0' || resetScreen) {
@@ -144,7 +146,7 @@
             previousInput = '';
             operation = null;
             updateDisplay();
-            kontolMessage.style.display = 'none';
+            specialMessage.style.display = 'none';
         }
 
         function updateDisplay() {
@@ -175,8 +177,8 @@
                     return;
             }
             
-            // Always show KONTOL as the answer
-            currentInput = 'KONTOL';
+            // Always show romantic message as the answer
+            currentInput = 'Mau kah kamu menjadi pacar aku? 🤭💐';
             operation = null;
             updateDisplay();
             
@@ -186,4 +188,3 @@
     </script>
 </body>
 </html>
-
